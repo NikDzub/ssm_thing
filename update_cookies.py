@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-
-
+#!/usr/bin/env python3s
 import asyncio
 from playwright.async_api import async_playwright
 import os
@@ -23,6 +21,7 @@ cookies_json = os.listdir("./cookies")
 
 async def p1():
     for acc in cookies_json:
+        print("---")
         print(acc)
         async with async_playwright() as p:
             context = await p.firefox.launch(headless=False)
